@@ -5,7 +5,7 @@ import { App } from "./App";
 
 const Root = () => (
   <div style={{ display: "flex", flexFlow: "column", alignItems: "center" }}>
-    <h1>Embedded VKUI App</h1>
+    <h1>Embedded VKUI App demo</h1>
     <div>
       <input placeholder="some native form elemnts" />
       <br />
