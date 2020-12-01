@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import {
+  View,
+  Panel,
+  PanelHeader,
+  PanelHeaderBack,
+  Group,
+  CellButton,
+  ConfigProvider,
+  VKCOM,
+  WebviewType,
+  AdaptivityProvider,
+  SplitCol,
+} from "@vkontakte/vkui";
 
-function App() {
+export function App() {
+  const [panel, setPanel] = useState("1");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ConfigProvider
+      platform={VKCOM}
+      webviewType={WebviewType.INTERNAL}
+      isWebView
+    >
+      <AdaptivityProvider>
+        <SplitCol width="100%" animate={false}>
+          <View activePanel={panel}>
+            <Panel id="1">
+              <PanelHeader left={<PanelHeaderBack />}>Test app</PanelHeader>
+              <Group>
+                <CellButton onClick={() => setPanel("2")}>Panel 2</CellButton>
+              </Group>
+            </Panel>
+            <Panel id="2">
+              <PanelHeader left={<PanelHeaderBack />}>Test app</PanelHeader>
+              <Group>
+                <CellButton onClick={() => setPanel("1")}>Panel 1</CellButton>
+              </Group>
+            </Panel>
+          </View>
+        </SplitCol>
+      </AdaptivityProvider>
+    </ConfigProvider>
   );
 }
-
-export default App;
