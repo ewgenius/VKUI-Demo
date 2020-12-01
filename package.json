@@ -13,7 +13,7 @@
     "@vkontakte/icons": "^1.56.0",
     "@vkontakte/vk-bridge": "^2.3.0",
     "@vkontakte/vkjs": "^0.15.0",
-    "@vkontakte/vkui": "https://github.com/VKCOM/VKUI.git#feature/vkui-embed",
+    "@vkontakte/vkui": "https://github.com/VKCOM/VKUI.git#994a9b6cd68968d03ae48a446986079a9cb43b99",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",

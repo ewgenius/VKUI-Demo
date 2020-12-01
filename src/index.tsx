@@ -4,8 +4,21 @@ import "@vkontakte/vkui/dist/vkui.css";
 import { App } from "./App";
 
 const Root = () => (
-  <div style={{ margin: 20, border: "1px solid black" }}>
-    <div className="vkui-root">
+  <div style={{ display: "flex", flexFlow: "column", alignItems: "center" }}>
+    <h1>Embedded VKUI App</h1>
+    <div>
+      <input placeholder="some native form elemnts" />
+      <br />
+      <textarea />
+    </div>
+    <div
+      style={{
+        marginTop: 20,
+        minWidth: 500,
+        maxWidth: 800,
+        border: "1px solid black",
+      }}
+    >
       <App />
     </div>
   </div>
